@@ -183,57 +183,35 @@
   }
 
   /* Publications */
-  .pub {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .pub:last-child { border-bottom: none; }
-  .pub .title {
-    font-weight: 600;
-    color: var(--fg);
-    margin: 0 0 4px;
-  }
-  .pub .authors {
-    color: var(--fg-soft);
-    font-size: 0.93rem;
-    margin: 0 0 4px;
-  }
-  .pub .authors .me {
-    color: var(--fg);
-    font-weight: 600;
-  }
-  .pub .venue {
-    color: var(--muted);
-    font-size: 0.9rem;
-    font-style: italic;
+  .pub-list {
+    list-style: disc;
+    padding-left: 1.4em;
     margin: 0 0 8px;
   }
-  .pub .links {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    font-size: 0.88rem;
-  }
-  .pub .links a {
-    padding: 2px 10px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+  .pub-list li {
     color: var(--fg-soft);
+    margin-bottom: 14px;
+    line-height: 1.55;
   }
-  .pub .links a:hover {
+  .pub-list li .me {
+    color: var(--fg);
+    font-weight: 600;
+  }
+  .pub-list li em { color: var(--fg-soft); }
+  .pub-list li .pub-links a {
     color: var(--accent);
-    border-color: var(--accent);
+    font-size: 0.92em;
+    margin-left: 2px;
   }
 
   .year-header {
     font-family: 'Crimson Pro', serif;
     font-weight: 600;
-    color: var(--muted);
-    font-size: 1rem;
-    margin: 24px 0 4px;
-    letter-spacing: 0.05em;
+    color: var(--fg);
+    font-size: 1.7rem;
+    margin: 32px 0 12px;
   }
-  .year-header:first-child { margin-top: 0; }
+  .year-header:first-of-type { margin-top: 8px; }
 
   /* CV */
   .cv-actions {
@@ -377,64 +355,48 @@
   <section id="publications">
     <h2>Publications</h2>
 
-    <div class="year-header">In preparation &amp; submitted</div>
+    <h3 class="year-header">In preparation</h3>
+    <ul class="pub-list">
+      <li>
+        <span class="me">Yao, L.</span>, and D. Yang. The Role of Equatorial Waves in MJO Predictability in Deep Convolutional Networks.
+      </li>
+    </ul>
 
-    <article class="pub">
-      <p class="title">Deep learning the sources of MJO predictability: a spectral view of learned features</p>
-      <p class="authors"><span class="me">Yao, L.</span>, D. Yang, J. Duncan, A. Chattopadhyay, P. Hassanzadeh, W. Bhimji, and B. Yu</p>
-      <p class="venue">Under review, 2025</p>
-      <div class="links">
-        <a href="https://arxiv.org/abs/2510.03582" target="_blank" rel="noopener">arXiv</a>
-      </div>
-    </article>
+    <h3 class="year-header">2025</h3>
+    <ul class="pub-list">
+      <li>
+        <span class="me">Yao, L.</span>, D. Yang, J. Duncan, A. Chattopadhyay, P. Hassanzadeh, W. Bhimji, and B. Yu (2025). Deep Learning the Sources of MJO Predictability: A Spectral View of Learned Features. <em>Under review.</em>
+        <span class="pub-links">[<a href="https://arxiv.org/abs/2510.03582" target="_blank" rel="noopener">arXiv</a>]</span>
+      </li>
+      <li>
+        <span class="me">Yao, L.</span>, W. Kang, G. Flierl, C. Liu, A. Kan, and K. Burns (2025). Baroclinic Instability as a Driver of Polar Vortices on Giant Planets. <em>WHOI GFD Proceedings Volume 2025</em>.
+        <span class="pub-links">[<a href="https://gfd.whoi.edu/gfd-publications/gfd-proceedings-volumes/2025-2/" target="_blank" rel="noopener">link</a>]</span>
+      </li>
+    </ul>
 
-    <article class="pub">
-      <p class="title">The Role of Equatorial Waves in MJO Predictability in Deep Convolutional Networks</p>
-      <p class="authors"><span class="me">Yao, L.</span>, and D. Yang</p>
-      <p class="venue">In preparation</p>
-    </article>
+    <h3 class="year-header">2024</h3>
+    <ul class="pub-list">
+      <li>
+        Yang, D., <span class="me">L. Yao</span>, and W. Hannah (2024). Vertically Resolved Analysis of the Madden&ndash;Julian Oscillation Highlights the Role of Convective Transport of Moist Static Energy. <em>Geophysical Research Letters</em>.
+        <span class="pub-links">[<a href="https://doi.org/10.1029/2024GL109910" target="_blank" rel="noopener">link</a>]</span>
+      </li>
+    </ul>
 
-    <article class="pub">
-      <p class="title">Baroclinic instability as a driver of polar vortices on giant planets</p>
-      <p class="authors"><span class="me">Yao, L.</span>, W. Kang, G. Flierl, C. Liu, A. Kan, and K. Burns</p>
-      <p class="venue">Submitted to WHOI GFD Proceedings Volume 2025</p>
-      <div class="links">
-        <a href="https://www.dropbox.com/scl/fi/g2l67gs5na440rdmibapf/WHOI_GFD_LinYao.pdf?rlkey=1g4z3yznpvcwbiqmcjfclzfsu&amp;dl=0" target="_blank" rel="noopener">Preview PDF</a>
-      </div>
-    </article>
+    <h3 class="year-header">2023</h3>
+    <ul class="pub-list">
+      <li>
+        <span class="me">Yao, L.</span>, and D. Yang (2023). Convective Self-Aggregation Occurs Without Radiative Feedbacks in Warm Climates. <em>Geophysical Research Letters</em>.
+        <span class="pub-links">[<a href="https://doi.org/10.1029/2023GL104624" target="_blank" rel="noopener">link</a>]</span>
+      </li>
+    </ul>
 
-    <div class="year-header">2024</div>
-
-    <article class="pub">
-      <p class="title">Vertically Resolved Analysis of the Madden&ndash;Julian Oscillation Highlights the Role of Convective Transport of Moist Static Energy</p>
-      <p class="authors">Yang, D., <span class="me">L. Yao</span>, and W. Hannah</p>
-      <p class="venue">Geophysical Research Letters, 2024</p>
-      <div class="links">
-        <a href="https://doi.org/10.1029/2024GL109910" target="_blank" rel="noopener">DOI</a>
-      </div>
-    </article>
-
-    <div class="year-header">2023</div>
-
-    <article class="pub">
-      <p class="title">Convective Self-Aggregation Occurs Without Radiative Feedbacks in Warm Climates</p>
-      <p class="authors"><span class="me">Yao, L.</span>, and D. Yang</p>
-      <p class="venue">Geophysical Research Letters, 2023</p>
-      <div class="links">
-        <a href="https://doi.org/10.1029/2023GL104624" target="_blank" rel="noopener">DOI</a>
-      </div>
-    </article>
-
-    <div class="year-header">2022</div>
-
-    <article class="pub">
-      <p class="title">A Vertically Resolved MSE Framework Highlights the Role of the Boundary Layer in Convective Self-Aggregation</p>
-      <p class="authors"><span class="me">Yao, L.</span>, D. Yang, and Z.-M. Tan</p>
-      <p class="venue">Journal of the Atmospheric Sciences, 2022</p>
-      <div class="links">
-        <a href="https://doi.org/10.1175/JAS-D-20-0254.1" target="_blank" rel="noopener">DOI</a>
-      </div>
-    </article>
+    <h3 class="year-header">2022</h3>
+    <ul class="pub-list">
+      <li>
+        <span class="me">Yao, L.</span>, D. Yang, and Z.-M. Tan (2022). A Vertically Resolved MSE Framework Highlights the Role of the Boundary Layer in Convective Self-Aggregation. <em>Journal of the Atmospheric Sciences</em>.
+        <span class="pub-links">[<a href="https://doi.org/10.1175/JAS-D-20-0254.1" target="_blank" rel="noopener">link</a>]</span>
+      </li>
+    </ul>
 
     <p style="margin-top: 24px; color: var(--muted); font-size: 0.9rem;">
       A full and up-to-date list is on <a href="https://scholar.google.com/citations?user=a5nrVUoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
